@@ -59,7 +59,7 @@ public class Main {
         } while(robo.encontrouAlimento((xAlimento - 1), (yAlimento - 1)) != true);
         
         if(jaEncontrou == false) {
-        	System.out.println("O robo " + robo.GetCor() + " encontrou o alimento!");
+        	System.out.println("O robo " + robo.getCor() + " encontrou o alimento!");
         }                
     }
 }
