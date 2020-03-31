@@ -26,7 +26,7 @@ public class MainTres {
             yAlimento = teclado.nextInt();
         } while ((xAlimento > 5 || xAlimento < 1) || (yAlimento > 5 || yAlimento < 1));
         
-        System.out.println("O robo " + roboDois.GetCor() + " está na posição (1,1)");
+        System.out.println("O robo " + roboDois.getCor() + " está na posição (1,1)");
         
         while (roboUm.encontrouAlimento((xAlimento - 1), (yAlimento - 1)) == false ) {
             System.out.println("\n");
@@ -39,7 +39,7 @@ public class MainTres {
                 for(int j = 0; j < 5; j++){
                         if(i == (yAlimento - 1) && j == (xAlimento - 1)){
                             System.out.print("A ");
-                        }else if(roboUm.GetX() == j && roboUm.GetY() == i){
+                        }else if(roboUm.getX() == j && roboUm.getY() == i){
                             System.out.print("R ");
                         }else {
                             System.out.print(". ");
@@ -56,7 +56,7 @@ public class MainTres {
             tentativasRoboUm++;
         }
         
-        System.out.println("O robo " + roboDois.GetCor() + " está na posição (1,1)");
+        System.out.println("O robo " + roboDois.getCor() + " está na posição (1,1)");
         
         while (roboDois.encontrouAlimento((xAlimento - 1), (yAlimento - 1)) == false) {
             System.out.println("\n");
@@ -69,7 +69,7 @@ public class MainTres {
                 for(int j=0; j<5; j++){
                         if(i == (yAlimento - 1) && j == (xAlimento - 1)){
                             System.out.print("A ");
-                        }else if(roboDois.GetX() == j && roboDois.GetY() == i){
+                        }else if(roboDois.getX() == j && roboDois.getY() == i){
                             System.out.print("R ");
                         }else {
                             System.out.print(". ");
@@ -88,17 +88,17 @@ public class MainTres {
         System.out.println("=========================================");
         
         if(tentativasRoboUm < tentativasRoboDois) {
-        	System.out.println("Robo " + roboUm.GetCor() + " encontrou o alimento primeiro!");
-        	System.out.println("Número de tentativas do robo " + roboUm.GetCor() + ": " + tentativasRoboUm);
-        	System.out.println("Número de tentativas do robo " + roboDois.GetCor() + ": " + tentativasRoboDois);
+        	System.out.println("Robo " + roboUm.getCor() + " encontrou o alimento primeiro!");
+        	System.out.println("Número de tentativas do robo " + roboUm.getCor() + ": " + tentativasRoboUm);
+        	System.out.println("Número de tentativas do robo " + roboDois.getCor() + ": " + tentativasRoboDois);
         } else if(tentativasRoboUm > tentativasRoboDois) {
-        	System.out.println("Robo " + roboDois.GetCor() + " encontrou o alimento primeiro!");
-        	System.out.println("Número de tentativas do robo " + roboUm.GetCor() + ": " + tentativasRoboUm);
-        	System.out.println("Número de tentativas do robo " + roboDois.GetCor() + ": " + tentativasRoboDois);
+        	System.out.println("Robo " + roboDois.getCor() + " encontrou o alimento primeiro!");
+        	System.out.println("Número de tentativas do robo " + roboUm.getCor() + ": " + tentativasRoboUm);
+        	System.out.println("Número de tentativas do robo " + roboDois.getCor() + ": " + tentativasRoboDois);
         } else {
         	System.out.println("Os dois robos encontraram o alimento ao mesmo tempo!");
-        	System.out.println("Número de tentativas do robo " + roboUm.GetCor() + ": " + tentativasRoboUm);
-        	System.out.println("Número de tentativas do robo " + roboDois.GetCor() + ": " + tentativasRoboDois);
+        	System.out.println("Número de tentativas do robo " + roboUm.getCor() + ": " + tentativasRoboUm);
+        	System.out.println("Número de tentativas do robo " + roboDois.getCor() + ": " + tentativasRoboDois);
         }
     }
 }
