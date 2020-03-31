@@ -10,22 +10,22 @@ public class Robo {
         this.x = 0;
         this.y = 0;
     }
-    public String GetCor(){
+    public String getCor(){
         return this.cor;
     }
-    public void SetCor(String cor){
+    public void setCor(String cor){
         this.cor = cor;
     }
-    public Integer GetX(){
+    public Integer getX(){
         return this.x;
     }
-    public void SetX(Integer x){
+    public void setX(Integer x){
         this.x = x;
     }
-    public Integer GetY(){
+    public Integer getY(){
         return this.y;
     }
-    public void SetY(Integer y){
+    public void setY(Integer y){
         this.y = y;
     }
     
