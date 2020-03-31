@@ -18,12 +18,12 @@ public class MainTres {
         Integer yAlimento;
         
         do {
-        System.out.println("Determine a posição do alimento que o Robo Vermelho irá encontrar: ");
-        System.out.println("OBS: Posições no limite de 1 a 5.");
-        System.out.println("Digite o X do alimento: ");
-        xAlimento = teclado.nextInt();
-        System.out.println("Digite o Y do alimento: ");
-        yAlimento = teclado.nextInt();
+            System.out.println("Determine a posição do alimento que o Robo Vermelho irá encontrar: ");
+            System.out.println("OBS: Posições no limite de 1 a 5.");
+            System.out.println("Digite o X do alimento: ");
+            xAlimento = teclado.nextInt();
+            System.out.println("Digite o Y do alimento: ");
+            yAlimento = teclado.nextInt();
         } while ((xAlimento > 5 || xAlimento < 1) || (yAlimento > 5 || yAlimento < 1));
         
         System.out.println("O robo " + roboDois.GetCor() + " está na posição (1,1)");
@@ -34,9 +34,9 @@ public class MainTres {
             
             //i = coluna
             //j = linha
-            for(int i=0; i<5; i++){
+            for(int i = 0; i < 5; i++){
                 System.out.println("\n");
-                for(int j=0; j<5; j++){
+                for(int j = 0; j < 5; j++){
                         if(i == (yAlimento - 1) && j == (xAlimento - 1)){
                             System.out.print("A ");
                         }else if(roboUm.GetX() == j && roboUm.GetY() == i){
@@ -44,8 +44,8 @@ public class MainTres {
                         }else {
                             System.out.print(". ");
                         }
-                    }
                 }
+            }
             
             System.out.println("\n");
             Integer opçãoRoboUm = gerador.nextInt(5);
@@ -74,8 +74,8 @@ public class MainTres {
                         }else {
                             System.out.print(". ");
                         }
-                    }
                 }
+            }
             
             System.out.println("\n");
             
