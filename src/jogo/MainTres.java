@@ -14,13 +14,21 @@ public class MainTres {
         Robo roboUm = new Robo("Azul");
         RoboInteligente roboDois = new RoboInteligente("Preto");
         
-        System.out.println("Determine a posição do alimento: ");
-        System.out.println("Digite o X do alimento: ");
-        Integer xAlimento = teclado.nextInt();
-        System.out.println("Digite o Y do alimento: ");
-        Integer yAlimento = teclado.nextInt();
+        Integer xAlimento;
+        Integer yAlimento;
         
-        while (roboUm.encontrouAlimento(xAlimento, yAlimento) == false ) {
+        do {
+        System.out.println("Determine a posição do alimento que o Robo Vermelho irá encontrar: ");
+        System.out.println("OBS: Posições no limite de 1 a 5.");
+        System.out.println("Digite o X do alimento: ");
+        xAlimento = teclado.nextInt();
+        System.out.println("Digite o Y do alimento: ");
+        yAlimento = teclado.nextInt();
+        } while ((xAlimento > 5 || xAlimento < 1) || (yAlimento > 5 || yAlimento < 1));
+        
+        System.out.println("O robo " + roboDois.GetCor() + " está na posição (1,1)");
+        
+        while (roboUm.encontrouAlimento((xAlimento - 1), (yAlimento - 1)) == false ) {
             System.out.println("\n");
             System.out.println("O alimento está na posição (" + xAlimento + "," + yAlimento + ")");
             
@@ -29,7 +37,7 @@ public class MainTres {
             for(int i=0; i<5; i++){
                 System.out.println("\n");
                 for(int j=0; j<5; j++){
-                        if(i == yAlimento && j == xAlimento){
+                        if(i == (yAlimento - 1) && j == (xAlimento - 1)){
                             System.out.print("A ");
                         }else if(roboUm.GetX() == j && roboUm.GetY() == i){
                             System.out.print("R ");
@@ -40,7 +48,6 @@ public class MainTres {
                 }
             
             System.out.println("\n");
-            
             Integer opçãoRoboUm = gerador.nextInt(5);
                 
             String posicaoAtualRoboUm = roboUm.mover(opçãoRoboUm);
@@ -48,7 +55,10 @@ public class MainTres {
         	
             tentativasRoboUm++;
         }
-        while (roboDois.encontrouAlimento(xAlimento, yAlimento) == false) {
+        
+        System.out.println("O robo " + roboDois.GetCor() + " está na posição (1,1)");
+        
+        while (roboDois.encontrouAlimento((xAlimento - 1), (yAlimento - 1)) == false) {
             System.out.println("\n");
             System.out.println("O alimento está na posição (" + xAlimento + "," + yAlimento + ")");
             
@@ -57,7 +67,7 @@ public class MainTres {
             for(int i=0; i<5; i++){
                 System.out.println("\n");
                 for(int j=0; j<5; j++){
-                        if(i == yAlimento && j == xAlimento){
+                        if(i == (yAlimento - 1) && j == (xAlimento - 1)){
                             System.out.print("A ");
                         }else if(roboDois.GetX() == j && roboDois.GetY() == i){
                             System.out.print("R ");

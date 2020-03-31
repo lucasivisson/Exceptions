@@ -5,15 +5,23 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        Robo robo = new RoboInteligente("Vermelho");
-        System.out.println("Você é o Robo Vermelho.");
-        System.out.println("Determine a posição do alimento que o Robo Vermelho irá encontrar: ");
-        System.out.println("Digite o X do alimento: ");
-        Integer xAlimento = teclado.nextInt();
-        System.out.println("Digite o Y do alimento: ");
-        Integer yAlimento = teclado.nextInt();
+        Robo robo = new Robo("Vermelho");
         
-        System.out.println("O robo está na posição (0,0)");
+        Integer xAlimento;
+        Integer yAlimento;
+        
+        System.out.println("Você é o Robo Vermelho.");
+        
+        do {
+        System.out.println("Determine a posição do alimento que o Robo Vermelho irá encontrar: ");
+        System.out.println("OBS: Posições no limite de 1 a 5.");
+        System.out.println("Digite o X do alimento: ");
+        xAlimento = teclado.nextInt();
+        System.out.println("Digite o Y do alimento: ");
+        yAlimento = teclado.nextInt();
+        } while ((xAlimento > 5 || xAlimento < 1) || (yAlimento > 5 || yAlimento < 1));
+          
+        System.out.println("O robo está na posição (1,1)");
         
         do {
             //i = coluna
@@ -21,7 +29,7 @@ public class Main {
             for(int i=0; i<5; i++){
                 System.out.println("\n");
                 for(int j=0; j<5; j++){
-                        if(i == yAlimento && j == xAlimento){
+                        if(i == (yAlimento - 1) && j == (xAlimento - 1)){
                             System.out.print("A ");
                         }else if(robo.GetX() == j && robo.GetY() == i){
                             System.out.print("R ");
@@ -35,10 +43,11 @@ public class Main {
             System.out.println("Mova o robo!");
             System.out.println("1 - cima / 2 - baixo / 3 - direita / 4 - esquerda");
             Integer posicao = teclado.nextInt();
+            System.out.println("\n");
             String posiçãoAtualRobo = robo.mover(posicao);
             System.out.println(posiçãoAtualRobo);
                 
-        } while(robo.encontrouAlimento(xAlimento, yAlimento) != true);
-        System.out.println("O robo + " + robo.GetCor() + " encontrou o alimento!");
+        } while(robo.encontrouAlimento((xAlimento - 1), (yAlimento - 1)) != true);
+        System.out.println("O robo " + robo.GetCor() + " encontrou o alimento!");
     }
 }

@@ -153,6 +153,6 @@ public class RoboInteligente extends Robo{
         }catch (MovimentoInvalidoException ex) {
             System.out.println("Campos negativos são inválidos. Movimento não executado!");
         }
-        return "O robo " + this.cor + " está na posição [" + this.x + "," + this.y + "]";
+        return "O robo " + this.cor + " está na posição [" + (this.x + 1) + "," + (this.y + 1) + "]";
     }
 }

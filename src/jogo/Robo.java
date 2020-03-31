@@ -103,7 +103,7 @@ public class Robo {
         } catch (MovimentoInvalidoException ex) {
             System.out.println("Posições que ultrapassam o tamanho do campo são inválidos. Movimento não executado!");
         }
-        return "O robo " + this.cor + " está na posição [" + this.x + "," + this.y + "]";
+        return "O robo " + this.cor + " está na posição [" + (this.x + 1) + "," + (this.y + 1) + "]";
     }
     public boolean encontrouAlimento(Integer x, Integer y){
         boolean encontrouAlimento = false;
