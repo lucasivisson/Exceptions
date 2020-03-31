@@ -25,7 +25,7 @@ public class Main {
         
         System.out.println("\n");
           
-        System.out.println("O robo " + robo.GetCor() + " está na posição (1,1)");
+        System.out.println("O robo " + robo.getCor() + " está na posição (1,1)");
         
         do {
             //i = coluna
@@ -35,7 +35,7 @@ public class Main {
                 for(int j = 0; j < 5; j++){
                     if(i == (yAlimento - 1) && j == (xAlimento - 1)){
                         System.out.print("A ");
-                    } else if(robo.GetX() == j && robo.GetY() == i){
+                    } else if(robo.getX() == j && robo.getY() == i){
                         System.out.print("R ");
                     } else {
                         System.out.print(". ");
@@ -46,7 +46,7 @@ public class Main {
             if(robo.encontrouAlimento((xAlimento - 1), (yAlimento- 1))) {
             	jaEncontrou = true;
             	System.out.println("\n");
-            	System.out.println("O robo " + robo.GetCor() + " encontrou o alimento!");
+            	System.out.println("O robo " + robo.getCor() + " encontrou o alimento!");
             } else {
             	System.out.println("\n");
                 System.out.println("O alimento está na posição (" + xAlimento + "," + yAlimento + ")");
