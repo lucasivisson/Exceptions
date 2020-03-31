@@ -11,7 +11,7 @@ Um jogo criado em java e com algumas bibliotecas
 
 ## Como rodar?
 
-1. Dê "git clone" nesse repositório.
+1. Clone esse repositório usando " git clone https://github.com/lucasivisson/Exceptions.git "
 2. Execute o projeto na sua IDE. ( Recomendo o NetBeans )
 
 ## Contribuidores
@@ -26,6 +26,8 @@ Um jogo criado em java e com algumas bibliotecas
 7. Classe RoboInteligente - [Lucas Ivisson](https://github.com/lucasivisson) e [Ives Gomes](https://github.com/Ives-Gomes)
 8. Classe mainTres - [Ives Gomes](https://github.com/Ives-Gomes) e [Lucas Ivisson](https://github.com/lucasivisson)
 
+## License
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/lucasivisson/Exceptions/blob/master/LICENSE) file for details.
 
 
 
