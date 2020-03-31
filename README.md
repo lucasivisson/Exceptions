@@ -18,6 +18,13 @@ Um jogo criado em java e com algumas bibliotecas
 1. [Lucas Ivisson](https://github.com/lucasivisson)
 2. [Ives Gomes](https://github.com/Ives-Gomes)
 
+## Funcionalidades
+1. Classe MovimentoInvalidoException - [Lucas Ivisson](https://github.com/lucasivisson) e [Ives Gomes](https://github.com/Ives-Gomes)
+2. Classe Robo - [Lucas Ivisson](https://github.com/lucasivisson) e [Ives Gomes](https://github.com/Ives-Gomes)
+5. Classe main - [Ives Gomes](https://github.com/Ives-Gomes) e [Lucas Ivisson](https://github.com/lucasivisson)
+6. Classe mainDois - [Ives Gomes](https://github.com/Ives-Gomes) e [Lucas Ivisson](https://github.com/lucasivisson)
+7. Classe RoboInteligente - [Lucas Ivisson](https://github.com/lucasivisson) e [Ives Gomes](https://github.com/Ives-Gomes
+8. Classe mainTres - [Ives Gomes](https://github.com/Ives-Gomes) e [Lucas Ivisson](https://github.com/lucasivisson)
 
 
 
