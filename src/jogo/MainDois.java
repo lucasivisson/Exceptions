@@ -36,9 +36,9 @@ public class MainDois {
 
 		    //i = coluna
 		    //j = linha
-		    for(int i=0; i<5; i++){
+		    for(int i = 0; i < 5; i++){
 			System.out.println("\n");
-			for(int j=0; j<5; j++){
+			for(int j = 0; j < 5; j++){
 				if(i == (yAlimento - 1) && j == (xAlimento - 1)){
 				    System.out.print("A ");
 				}else if(roboUm.getX() == j && roboUm.getY() == i){
