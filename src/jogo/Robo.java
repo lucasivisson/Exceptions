@@ -31,34 +31,34 @@ public class Robo {
     
     public String mover(String posicao){
         try{
-        if("down".equals(posicao)){
-            if(y == 4){
-                throw new MovimentoInvalidoException(x, y);
+            if("down".equals(posicao)){
+                if(y == 4){
+                    throw new MovimentoInvalidoException(x, y);
+                }
+                else if(y < 5){
+                y++;
+                }
+            }    
+            else if("up".equals(posicao)){
+               if(y == 0 || y > 4){
+                   throw new MovimentoInvalidoException(x, y);
+               }else if(y > 0){
+                   y--;
+               }
+            }else if("right".equals(posicao)){
+                if(x == 4){
+                    throw new MovimentoInvalidoException(x, y);
+                }else if(x < 5){
+                    x++;
+                }
             }
-            else if(y < 5){
-            y++;
+            else if("left".equals(posicao)){
+               if(x == 0 || x > 4){
+                   throw new MovimentoInvalidoException(x, y);
+               }else if(x > 0){
+                   x--;
+               }
             }
-        }    
-        else if("up".equals(posicao)){
-           if(y == 0 || y > 4){
-               throw new MovimentoInvalidoException(x, y);
-           }else if(y > 0){
-               y--;
-           }
-        }else if("right".equals(posicao)){
-            if(x == 4){
-                throw new MovimentoInvalidoException(x, y);
-            }else if(x < 5){
-                x++;
-            }
-        }
-        else if("left".equals(posicao)){
-           if(x == 0 || x > 4){
-               throw new MovimentoInvalidoException(x, y);
-           }else if(x > 0){
-               x--;
-           }
-        }
         } catch (MovimentoInvalidoException ex) {
             System.out.println("Campos negativos são inválidos. Movimento não executado!");
         }
@@ -66,40 +66,40 @@ public class Robo {
     }
     public String mover(Integer opcao){
         try{
-        /*
-        1 - up
-        2 - down
-        3 - right
-        4 - left
-        */
-        if(opcao == 2){
-            if(y == 4){
-                throw new MovimentoInvalidoException(x, y);
+            /*
+            1 - up
+            2 - down
+            3 - right
+            4 - left
+            */
+            if(opcao == 2){
+                if(y == 4){
+                    throw new MovimentoInvalidoException(x, y);
+                }
+                else if(y < 5){
+                y++;
+                }
+            }    
+            else if(opcao == 1){
+               if(y == 0 || y > 4){
+                   throw new MovimentoInvalidoException(x, y);
+               }else if(y > 0){
+                   y--;
+               }
+            }else if(opcao == 3){
+                if(x == 4){
+                    throw new MovimentoInvalidoException(x, y);
+                }else if(x < 5){
+                    x++;
+                }
             }
-            else if(y < 5){
-            y++;
+            else if(opcao == 4){
+               if(x == 0 || x > 4){
+                   throw new MovimentoInvalidoException(x, y);
+               }else if(x > 0){
+                   x--;
+               }
             }
-        }    
-        else if(opcao == 1){
-           if(y == 0 || y > 4){
-               throw new MovimentoInvalidoException(x, y);
-           }else if(y > 0){
-               y--;
-           }
-        }else if(opcao == 3){
-            if(x == 4){
-                throw new MovimentoInvalidoException(x, y);
-            }else if(x < 5){
-                x++;
-            }
-        }
-        else if(opcao == 4){
-           if(x == 0 || x > 4){
-               throw new MovimentoInvalidoException(x, y);
-           }else if(x > 0){
-               x--;
-           }
-        }
         } catch (MovimentoInvalidoException ex) {
             System.out.println("Posições que ultrapassam o tamanho do campo são inválidos. Movimento não executado!");
         }
@@ -110,7 +110,7 @@ public class Robo {
         if(this.x == x && this.y == y){
             encontrouAlimento = true;
             return encontrouAlimento;
-        }else{
+        } else{
             return encontrouAlimento;
         }
     }
