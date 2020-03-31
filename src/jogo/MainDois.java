@@ -28,7 +28,7 @@ public class MainDois {
 
 		System.out.println("\n");
 
-		System.out.println("O robo " + roboUm.GetCor() + " está na posição (1,1)");
+		System.out.println("O robo " + roboUm.getCor() + " está na posição (1,1)");
 
 		while (roboUm.encontrouAlimento((xAlimento - 1), (yAlimento - 1)) == false ) {
 		    System.out.println("\n");
@@ -41,7 +41,7 @@ public class MainDois {
 			for(int j=0; j<5; j++){
 				if(i == (yAlimento - 1) && j == (xAlimento - 1)){
 				    System.out.print("A ");
-				}else if(roboUm.GetX() == j && roboUm.GetY() == i){
+				}else if(roboUm.getX() == j && roboUm.getY() == i){
 				    System.out.print("R ");
 				}else {
 				    System.out.print(". ");
