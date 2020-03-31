@@ -12,7 +12,7 @@ Um jogo criado em java e com algumas bibliotecas
 ## Como rodar?
 
 1. Dê "git clone" nesse repositório.
-2. Execute o jogo na sua IDE. ( Recomendo o NetBeans )
+2. Execute o projeto na sua IDE. ( Recomendo o NetBeans )
 
 ## Contribuidores
 1. [Lucas Ivisson](https://github.com/lucasivisson)
