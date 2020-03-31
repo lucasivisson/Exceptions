@@ -15,8 +15,8 @@ Um jogo criado em java e com algumas bibliotecas
 2. Execute o projeto na sua IDE. ( Recomendo o NetBeans )
 
 ## Contribuidores
-1. [Lucas Ivisson](https://github.com/lucasivisson)
-2. [Ives Gomes](https://github.com/Ives-Gomes)
+1. [Lucas Ivisson](https://github.com/lucasivisson) - 1515094
+2. [Ives Gomes](https://github.com/Ives-Gomes) - 1514962
 
 ## Funcionalidades
 1. Classe MovimentoInvalidoException - [Lucas Ivisson](https://github.com/lucasivisson) e [Ives Gomes](https://github.com/Ives-Gomes)
