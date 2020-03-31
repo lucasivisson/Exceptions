@@ -10,6 +10,8 @@ public class Main {
         Integer xAlimento;
         Integer yAlimento;
         
+        Boolean jaEncontrou = false;
+        
         System.out.println("Você é o Robo Vermelho.");
         
         do {
@@ -20,8 +22,10 @@ public class Main {
         System.out.println("Digite o Y do alimento: ");
         yAlimento = teclado.nextInt();
         } while ((xAlimento > 5 || xAlimento < 1) || (yAlimento > 5 || yAlimento < 1));
+        
+        System.out.println("\n");
           
-        System.out.println("O robo está na posição (1,1)");
+        System.out.println("O robo " + robo.GetCor() + " está na posição (1,1)");
         
         do {
             //i = coluna
@@ -38,16 +42,24 @@ public class Main {
                         }
                     }
                 }
-            System.out.println("\n");
-            System.out.println("O alimento está na posição (" + xAlimento + "," + yAlimento + ")");
-            System.out.println("Mova o robo!");
-            System.out.println("1 - cima / 2 - baixo / 3 - direita / 4 - esquerda");
-            Integer posicao = teclado.nextInt();
-            System.out.println("\n");
-            String posiçãoAtualRobo = robo.mover(posicao);
-            System.out.println(posiçãoAtualRobo);
-                
+            
+            if(robo.encontrouAlimento((xAlimento - 1), (yAlimento- 1))) {
+            	jaEncontrou = true;
+            	System.out.println("\n");
+            	System.out.println("O robo " + robo.GetCor() + " encontrou o alimento!");
+            } else {
+            	System.out.println("\n");
+                System.out.println("O alimento está na posição (" + xAlimento + "," + yAlimento + ")");
+                System.out.println("Mova o robo!");
+                System.out.println("1 - cima / 2 - baixo / 3 - direita / 4 - esquerda");
+                Integer posicao = teclado.nextInt();
+                String posiçãoAtualRobo = robo.mover(posicao);
+                System.out.println(posiçãoAtualRobo);
+            }        
         } while(robo.encontrouAlimento((xAlimento - 1), (yAlimento - 1)) != true);
-        System.out.println("O robo " + robo.GetCor() + " encontrou o alimento!");
+        
+        if(jaEncontrou == false) {
+        	System.out.println("O robo " + robo.GetCor() + " encontrou o alimento!");
+        }                
     }
 }

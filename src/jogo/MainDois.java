@@ -25,8 +25,10 @@ public class MainDois {
         System.out.println("Digite o Y do alimento: ");
         yAlimento = teclado.nextInt();
         } while ((xAlimento > 5 || xAlimento < 1) || (yAlimento > 5 || yAlimento < 1));
+        
+        System.out.println("\n");
           
-        System.out.println("O robo " + roboDois.GetCor() + " está na posição (1,1)");
+        System.out.println("O robo " + roboUm.GetCor() + " está na posição (1,1)");
         
         while (roboUm.encontrouAlimento((xAlimento - 1), (yAlimento - 1)) == false ) {
             System.out.println("\n");
@@ -54,6 +56,8 @@ public class MainDois {
         	
             tentativasRoboUm++;
         }
+        
+        System.out.println("\n");
         
         System.out.println("O robo " + roboDois.GetCor() + " está na posição (1,1)");
         
