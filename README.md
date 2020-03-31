@@ -1,4 +1,4 @@
-# ATIVIDADE AVALIATIVA DA CADEIRA DE PEOO
+# Atividade Avaliativa da Cadeira de PEOO
 
 ## O que é esse projeto?
 Esse projeto é um jogo feito em Java que consiste em um robô que procura um alimento em uma determinada área, com algumas comparações a mais de robôs que procuram o alimento randomicamente e robos inteligentes.
@@ -14,7 +14,9 @@ Um jogo criado em java e com algumas bibliotecas
 1. Dê "git clone" nesse repositório.
 2. Execute o jogo na sua IDE. ( Recomendo o NetBeans )
 
-##Contribuidores
+## Contribuidores
+1. [Lucas Ivisson](https://github.com/lucasivisson)
+2. [Ives Gomes](https://github.com/Ives-Gomes)
 
 
 
