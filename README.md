@@ -4,7 +4,7 @@
 Esse projeto é um jogo feito em Java que consiste em um robô que procura um alimento em uma determinada área, com algumas comparações a mais de robôs que procuram o alimento randomicamente e robos inteligentes.
 
 ## Recursos
-Um jogo criado em java e com algumas bibliotecas
+Um jogo criado em java com as bibliotecas:
 
 + **Random** - Biblioteca que gera números aleatorios usados para fazer o robo que interage com o programa randomicamente. 
 + **Scanner** - Biblioteca para pegar os dados passados pelo teclado.
